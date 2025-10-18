@@ -1,0 +1,9 @@
+[build]
+  publish = "src/casefit"
+  command = ""
+
+# Optional: if a wrong path is requested, serve index.html instead of 404
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
