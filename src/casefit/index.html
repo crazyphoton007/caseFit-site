@@ -10,6 +10,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.thecasefit.com" />
   <meta name="theme-color" content="#000000" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <link rel="icon" href="/favicon.ico" />
   <style>
     :root { --bg:#000; --ink:#fff; --muted:#bfbfbf; --line:rgba(255,255,255,.08); --card:rgba(0,0,0,.35); }
@@ -123,8 +124,8 @@
         </div>
 
         <div class="ctaRow">
-          <button class="btn" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})">Register</button>
-          <button class="btn btn-ghost" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">See features</button>
+          <button class="btn" type="button" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})">Register</button>
+          <button class="btn btn-ghost" type="button" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">See features</button>
         </div>
 
         <div class="card" style="margin-top:10px">
@@ -261,13 +262,13 @@
   // =========================
   // MODES: progress / fixed
   // =========================
-  const MODE = "progress";            // "progress" | "fixed"
+  const MODE = "fixed";               // "progress" | "fixed"
   const TOTAL_DAYS = 45;              // progress mode
   const PROGRESS_PERCENT = 12;
   const START_AT_TEN = true;
 
-  const START_DATE = new Date('2025-10-17T00:00:00-04:00').getTime(); // fixed mode
-  const LAUNCH_DATE = new Date('2025-12-01T00:00:00-05:00').getTime();
+  const START_DATE = new Date('2026-04-19T00:00:00-04:00').getTime(); // fixed mode
+  const LAUNCH_DATE = new Date('2026-06-15T00:00:00-04:00').getTime();
 
   const d=document.getElementById('d'),h=document.getElementById('h'),m=document.getElementById('m'),s=document.getElementById('s');
   const bar=document.getElementById('bar'),label=document.getElementById('progressLabel');
