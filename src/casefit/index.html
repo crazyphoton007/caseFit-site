@@ -259,37 +259,28 @@
   </div>
 
   <script>
-  // =========================
-  // MODES: progress / fixed
-  // =========================
-  const MODE = "fixed";               // "progress" | "fixed"
-  const TOTAL_DAYS = 45;              // progress mode
-  const PROGRESS_PERCENT = 12;
+  // Countdown is anchored to a single launch date so it never resets on reload.
   const START_AT_TEN = true;
-
-  const START_DATE = new Date('2026-04-19T00:00:00-04:00').getTime(); // fixed mode
-  const LAUNCH_DATE = new Date('2026-06-15T00:00:00-04:00').getTime();
+  const PROGRESS_PERCENT = 12;
+  const START_DATE = new Date('2026-04-19T00:00:00-04:00').getTime();
+  const LAUNCH_DATE = new Date('2026-05-04T00:00:00-04:00').getTime();
 
   const d=document.getElementById('d'),h=document.getElementById('h'),m=document.getElementById('m'),s=document.getElementById('s');
   const bar=document.getElementById('bar'),label=document.getElementById('progressLabel');
   const header=document.getElementById('launchCopy'),daysBadge=document.getElementById('daysLeftNum');
   const clamp=(v,min,max)=>Math.max(min,Math.min(max,v));const pad=n=>String(n).padStart(2,'0');
 
-  let target, progressToShow;
-  if(MODE==="progress"){
-    const clean=clamp(Number(PROGRESS_PERCENT)||0,0,100);
-    const baseline=(START_AT_TEN && TOTAL_DAYS>=45 && clean===0)?10:clean;
-    const remainingDays=TOTAL_DAYS-(TOTAL_DAYS*baseline/100);
-    target=Date.now()+Math.max(0,remainingDays)*86400000;
-    progressToShow=baseline;
-  }else{
-    target=LAUNCH_DATE;
-    const total=Math.max(1,LAUNCH_DATE-START_DATE);
-    const progressed=Math.min(total,Math.max(0,Date.now()-START_DATE));
-    let pct=progressed/total*100;
-    if(START_AT_TEN && pct<10) pct=10;
-    progressToShow=clamp(pct,0,100);
+  const target=LAUNCH_DATE;
+  const total=Math.max(1,LAUNCH_DATE-START_DATE);
+  const progressed=Math.min(total,Math.max(0,Date.now()-START_DATE));
+  let progressToShow=progressed/total*100;
+  if(PROGRESS_PERCENT > 0) {
+    progressToShow = Math.max(progressToShow, PROGRESS_PERCENT);
   }
+  if(START_AT_TEN && progressToShow < 10) {
+    progressToShow = 10;
+  }
+  progressToShow=clamp(progressToShow,0,100);
 
   function updateProgressBar(pct){
     if(bar) bar.style.width=pct.toFixed(2)+'%';
