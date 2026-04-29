@@ -298,6 +298,7 @@
               class="form"
               method="POST"
               data-netlify="true"
+              data-netlify-recaptcha="true"
               netlify-honeypot="bot-field"
               action="/?registered=1#register">
           <input type="hidden" name="form-name" value="register" />
@@ -323,9 +324,7 @@
 
           <textarea name="message" rows="4" placeholder="Anything specific you need help with?"></textarea>
 
-          <!-- Optional: enable reCAPTCHA
           <div data-netlify-recaptcha="true"></div>
-          -->
 
           <label class="check">
             <input type="checkbox" name="consent" required />
