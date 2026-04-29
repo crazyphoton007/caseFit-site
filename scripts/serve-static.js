@@ -61,5 +61,5 @@ server.on("error", (error) => {
 });
 
 server.listen(port, host, () => {
-  console.log(`CaseFit static site available at http://${host}:${port}`);
+  console.log(`caseFit static site available at http://${host}:${port}`);
 });
