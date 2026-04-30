@@ -2,7 +2,14 @@ const fs = require("fs");
 const path = require("path");
 
 const publishDir = path.join(__dirname, "..", "src", "casefit");
-const requiredFiles = ["index.html", "_redirects", "casefit-wordmark-white.png", "favicon.ico"];
+const requiredFiles = [
+  "index.html",
+  "_redirects",
+  "casefit-wordmark-white.png",
+  "favicon.ico",
+  "favicon-64.png",
+  "apple-touch-icon.png",
+];
 const htmlPath = path.join(publishDir, "index.html");
 
 function fail(message) {
@@ -21,7 +28,7 @@ if (fs.existsSync(htmlPath)) {
   const html = fs.readFileSync(htmlPath, "utf8");
   const checks = [
     { needle: 'name="form-name" value="register"', label: "Netlify form marker" },
-    { needle: 'href="/favicon.ico"', label: "favicon reference" },
+    { needle: 'href="/favicon-64.png?v=2"', label: "PNG favicon reference" },
     { needle: 'id="registeredThanks"', label: "success state markup" },
   ];
 
