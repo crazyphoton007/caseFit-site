@@ -28,7 +28,7 @@ if (fs.existsSync(htmlPath)) {
   const html = fs.readFileSync(htmlPath, "utf8");
   const checks = [
     { needle: 'name="form-name" value="register"', label: "Netlify form marker" },
-    { needle: 'href="/favicon-64.png?v=2"', label: "PNG favicon reference" },
+    { needle: 'href="/favicon-64.png?v=3"', label: "PNG favicon reference" },
     { needle: 'id="registeredThanks"', label: "success state markup" },
   ];
 
