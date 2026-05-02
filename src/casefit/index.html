@@ -116,8 +116,74 @@
     .form{display:grid;gap:12px}
     .form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     @media (max-width:720px){.form .row{grid-template-columns:1fr}}
-    footer{margin:48px 0 24px;color:var(--muted);font-size:.95rem;text-align:center}
-    .footer-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;align-items:center;margin-top:14px}
+    footer{color:var(--muted);font-size:.95rem}
+    .site-footer{
+      width:100vw;
+      margin:54px calc(50% - 50vw) 0;
+      padding:56px 24px 34px;
+      background:#202020;
+      border-top:1px solid rgba(255,255,255,.08);
+      box-shadow:0 -24px 70px rgba(0,0,0,.24)
+    }
+    .footer-inner{max-width:1240px;margin:0 auto}
+    .footer-top{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr auto;gap:34px;align-items:start}
+    .footer-brand{display:grid;gap:12px;justify-items:start;color:#fff;text-align:left}
+    .footer-logo{font-size:1.9rem;line-height:1;font-weight:750;letter-spacing:.04em}
+    .footer-tagline{max-width:28ch;margin:0;color:#8f8f8f;line-height:1.6}
+    .footer-col{display:grid;gap:13px;justify-items:start;text-align:left}
+    .footer-col strong{color:#8e8e8e;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+    .footer-col span{color:#858585}
+    .footer-legal a{color:#858585;text-decoration:none;transition:color .2s ease}
+    .footer-legal a:hover{color:#fff}
+    .footer-social{display:flex;gap:9px;justify-content:flex-end}
+    .footer-social a{
+      width:30px;
+      height:30px;
+      display:grid;
+      place-items:center;
+      color:#202020;
+      background:#f4f4f4;
+      border-radius:3px;
+      transition:transform .2s ease,background .2s ease
+    }
+    .footer-social a:hover{background:var(--accent);transform:translateY(-2px)}
+    .footer-social svg{width:19px;height:19px;display:block;fill:currentColor}
+    .footer-rule{
+      height:1px;
+      margin:46px 0 30px;
+      background:repeating-linear-gradient(90deg,rgba(255,255,255,.42) 0 7px,transparent 7px 14px)
+    }
+    .footer-bottom{display:flex;gap:22px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    .footer-legal{display:flex;gap:22px;align-items:center;flex-wrap:wrap;color:#858585;font-size:.82rem}
+    .footer-contact{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+    .contact-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      min-height:46px;
+      padding:0 18px;
+      border-radius:999px;
+      color:#fff;
+      text-decoration:none;
+      background:linear-gradient(135deg,#171c1e 0%,#121715 100%);
+      box-shadow:0 14px 34px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.18);
+      transition:transform .2s ease,background .2s ease,box-shadow .2s ease
+    }
+    .contact-label{font-size:.78rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.78)}
+    .contact-pill.icon-only{width:54px;padding:0;justify-content:center}
+    .contact-pill:hover{background:linear-gradient(135deg,#087399 0%,#09a66f 100%);transform:translateY(-2px);box-shadow:0 18px 42px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.2)}
+    .contact-pill svg{width:22px;height:22px;display:block;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .whatsapp-badge{
+      width:30px;
+      height:30px;
+      display:grid;
+      place-items:center;
+      flex:0 0 auto;
+      border-radius:999px;
+      background:rgba(255,255,255,.96);
+      box-shadow:0 8px 18px rgba(37,211,102,.24),inset 0 1px 0 rgba(255,255,255,.7)
+    }
+    .contact-pill .whatsapp-badge svg{width:19px;height:19px;fill:#25d366;stroke:none}
     a.inline{color:#fff;text-decoration:none;border-bottom:1px solid #333}a.inline:hover{border-bottom-color:#fff}
     .social-link{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:8px 11px;background:rgba(255,255,255,.035);transition:transform .22s ease,border-color .22s ease,background .22s ease}
     .social-link:hover{border-color:rgba(134,239,172,.45);background:rgba(134,239,172,.08);transform:translateY(-2px)}
@@ -160,7 +226,8 @@
     .motion-rail span{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.13em;text-transform:uppercase}.motion-rail strong{display:block;margin-top:5px;color:#fff}
     @media (max-width:900px){.product-visual{min-height:390px}.app-shell{transform:none}.secure-card{right:8%;bottom:12px}.motion-rail{left:8%;top:22px}}
     @media (max-width:900px){h1{font-size:3.35rem}.lead{font-size:1.08rem}}
-    @media (max-width:540px){.wrap{padding:18px}.logo{height:108px}h1{font-size:2.45rem}.lead{font-size:1rem}.timer{display:grid;grid-template-columns:1fr 1fr}.unit{min-width:0}.product-visual{min-height:430px}.secure-card,.motion-rail{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:min(100%,300px);margin-top:10px}.app-shell{width:100%}.metric-row{grid-template-columns:1fr}.footer-row{display:grid;gap:10px;justify-items:center}.footer-sep{display:none}.social-link{width:100%;max-width:290px;justify-content:center}}
+    @media (max-width:900px){.footer-top{grid-template-columns:1fr 1fr}.footer-social{justify-content:flex-start}.footer-bottom{align-items:flex-start}.footer-contact{width:100%}}
+    @media (max-width:540px){.wrap{padding:18px}.logo{height:108px}h1{font-size:2.45rem}.lead{font-size:1rem}.timer{display:grid;grid-template-columns:1fr 1fr}.unit{min-width:0}.product-visual{min-height:430px}.secure-card,.motion-rail{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:min(100%,300px);margin-top:10px}.app-shell{width:100%}.metric-row{grid-template-columns:1fr}.site-footer{padding:42px 18px 28px}.footer-top{grid-template-columns:1fr;gap:26px}.footer-rule{margin:34px 0 24px}.footer-legal{gap:12px;line-height:1.6}.contact-pill{width:100%;justify-content:center}.contact-pill.icon-only{width:54px}.footer-contact{display:grid;grid-template-columns:1fr 54px}}
     @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
     @keyframes scan{to{transform:translateY(170%)}}
     @keyframes textSheen{0%,45%,100%{background-position:0% 50%}65%{background-position:100% 50%}}
@@ -349,20 +416,79 @@
       </div>
     </section>
 
-    <footer>
-      <div class="hr"></div>
-      <div class="footer-row">
-        <span>© <span id="yr"></span> caseFit</span>
-        <span class="footer-sep">•</span>
-        <a class="inline" href="mailto:support@thecasefit.com">support@thecasefit.com</a>
-        <span class="footer-sep">•</span>
-        <a class="inline social-link" href="https://wa.me/919807863007" target="_blank" rel="noopener" aria-label="WhatsApp +91 980-786-3007">
-          <svg class="whatsapp-mark" viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="#25D366" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.33 4.96L2 22l5.26-1.38a9.86 9.86 0 0 0 4.78 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.46 17.51 2 12.04 2Z"/>
-            <path fill="#fff" d="M17.65 14.46c-.31-.16-1.84-.91-2.13-1.01-.29-.11-.5-.16-.71.16-.21.31-.81 1.01-.99 1.22-.18.21-.36.23-.67.08-.31-.16-1.31-.48-2.49-1.54-.92-.82-1.54-1.83-1.72-2.14-.18-.31-.02-.48.14-.64.14-.14.31-.36.47-.55.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.71-.97-2.34-.25-.61-.51-.52-.71-.53h-.6c-.21 0-.55.08-.84.39-.29.31-1.1 1.07-1.1 2.61s1.13 3.04 1.28 3.25c.16.21 2.22 3.39 5.38 4.75.75.32 1.34.52 1.79.66.75.24 1.44.21 1.98.13.6-.09 1.84-.75 2.1-1.48.26-.73.26-1.35.18-1.48-.08-.13-.29-.21-.6-.37Z"/>
-          </svg>
-          <span>+91 980-786-3007</span>
-        </a>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="footer-logo">caseFit Technologies</div>
+            <p class="footer-tagline">Smart, secure legal support for modern matters.</p>
+          </div>
+
+          <div class="footer-col" aria-label="Discover">
+            <strong>Discover</strong>
+            <span>Features</span>
+            <span>Early access</span>
+            <span>For clients</span>
+            <span>For lawyers</span>
+          </div>
+
+          <div class="footer-col" aria-label="Connect">
+            <strong>Connect</strong>
+            <span>Customer Service</span>
+            <span>Contact Us</span>
+            <span>Partnerships</span>
+            <span>Provide Feedback</span>
+          </div>
+
+          <div class="footer-col" aria-label="Company">
+            <strong>Company</strong>
+            <span>About caseFit</span>
+            <span>Legal network</span>
+            <span>Security</span>
+          </div>
+
+          <div class="footer-social" aria-label="Social links">
+            <a href="https://www.facebook.com/ThecaseFitCompany/" target="_blank" rel="noopener" aria-label="caseFit on Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14.2 8.1V6.4c0-.8.2-1.4 1.4-1.4H17V2.2c-.7-.1-1.5-.2-2.4-.2-2.4 0-4.1 1.5-4.1 4.2v1.9H8v3.2h2.5V22h3.4V11.3h2.7l.4-3.2h-3Z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/company/casefit-technologies/?viewAsMember=true" target="_blank" rel="noopener" aria-label="caseFit Technologies on LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6.8 8.8H3.5V20h3.3V8.8ZM5.2 3.2a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8ZM20.5 13.7c0-3.1-1.7-5.1-4.3-5.1-1.7 0-2.7.9-3.2 1.8V8.8H9.8V20h3.3v-5.9c0-1.6.8-2.6 2.1-2.6 1.2 0 2 .9 2 2.6V20h3.3v-6.3Z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-rule" aria-hidden="true"></div>
+
+        <div class="footer-bottom">
+          <div class="footer-legal">
+            <span>© <span id="yr"></span> caseFit Technologies. All rights reserved.</span>
+            <span>Privacy Policy</span>
+            <span>Terms of Use</span>
+            <span>Site Map</span>
+          </div>
+
+          <div class="footer-contact">
+            <a class="contact-pill" href="https://wa.me/919807863007" target="_blank" rel="noopener" aria-label="WhatsApp +91 980-786-3007">
+              <span class="whatsapp-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M20.5 3.49A11.78 11.78 0 0 0 2.02 17.62L.5 23.2l5.71-1.5A11.77 11.77 0 0 0 23.5 11.73c0-3.15-1.23-6.11-3-8.24Zm-8.77 17.25c-1.84 0-3.64-.5-5.2-1.44l-.37-.22-3.39.89.9-3.3-.24-.38a9.74 9.74 0 1 1 8.3 4.45Zm5.34-7.29c-.29-.15-1.73-.85-2-.95-.27-.1-.47-.15-.67.15-.2.29-.77.95-.94 1.14-.17.2-.35.22-.64.07-.29-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.03-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.49.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.87 1.21 3.07c.15.2 2.09 3.19 5.07 4.47.71.31 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.73-.71 1.98-1.4.25-.69.25-1.27.17-1.4-.08-.12-.27-.19-.57-.34Z"/>
+                </svg>
+              </span>
+              <span class="contact-label">WhatsApp</span>
+              <span>+91 980-786-3007</span>
+            </a>
+            <a class="contact-pill icon-only" href="mailto:support@thecasefit.com" aria-label="Email support@thecasefit.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 6h16v12H4z"/>
+                <path d="m4 7 8 6 8-6"/>
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   </div>
