@@ -430,7 +430,7 @@
           </label>
 
           <div class="row" style="align-items:center">
-            <button class="btn" type="submit" onclick="this.closest('form').classList.add('was-validated')">Register</button>
+            <button class="btn" type="submit">Register</button>
             <span class="help">We’ll never share your info</span>
           </div>
         </form>
@@ -567,6 +567,21 @@
   }
   tick(); setInterval(tick,1000);
   document.getElementById('yr').textContent=new Date().getFullYear();
+
+  // Handle form submission and explicit CAPTCHA validation
+  const registerForm = document.querySelector('form[name="register"]');
+  if (registerForm) {
+    registerForm.addEventListener('submit', function(e) {
+      this.classList.add('was-validated');
+      
+      // Netlify's reCAPTCHA widget injects a textarea with the name 'g-recaptcha-response'
+      const captchaResponse = this.querySelector('[name="g-recaptcha-response"]');
+      if (captchaResponse && !captchaResponse.value) {
+        e.preventDefault();
+        alert('Please verify that you are not a bot by ticking the reCAPTCHA box.');
+      }
+    });
+  }
 
   // Inline “thanks” after Netlify redirect (?registered=1)
   if(new URLSearchParams(location.search).get('registered')==='1'){
