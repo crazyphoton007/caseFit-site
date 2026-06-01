@@ -6,6 +6,7 @@ const requiredFiles = [
   "index.html",
   "_redirects",
   "casefit-wordmark-white.png",
+  "favicon.svg",
   "favicon.ico",
   "favicon-16.png",
   "favicon-32.png",
@@ -33,6 +34,7 @@ if (fs.existsSync(htmlPath)) {
   const html = fs.readFileSync(htmlPath, "utf8");
   const checks = [
     { needle: 'name="form-name" value="register"', label: "Netlify form marker" },
+    { needle: 'href="/favicon.svg"', label: "SVG favicon reference" },
     { needle: 'href="/favicon-32.png?v=4"', label: "PNG favicon reference" },
     { needle: 'href="/site.webmanifest?v=4"', label: "web manifest reference" },
     { needle: 'id="registeredThanks"', label: "success state markup" },
