@@ -30,6 +30,11 @@ function resolvePath(urlPath) {
     return filePath;
   }
 
+  const htmlPath = `${filePath}.html`;
+  if (fs.existsSync(htmlPath) && fs.statSync(htmlPath).isFile()) {
+    return htmlPath;
+  }
+
   return path.join(publishDir, "index.html");
 }
 
