@@ -4,6 +4,8 @@ const path = require("path");
 const publishDir = path.join(__dirname, "..", "src", "casefit");
 const requiredFiles = [
   "index.html",
+  "privacy-policy.html",
+  "terms-of-use.html",
   "_redirects",
   "casefit-wordmark-white.png",
   "favicon.svg",
@@ -37,6 +39,8 @@ if (fs.existsSync(htmlPath)) {
     { needle: 'href="/favicon.svg"', label: "SVG favicon reference" },
     { needle: 'href="/favicon-32.png?v=4"', label: "PNG favicon reference" },
     { needle: 'href="/site.webmanifest?v=4"', label: "web manifest reference" },
+    { needle: 'href="/privacy-policy"', label: "privacy policy footer link" },
+    { needle: 'href="/terms-of-use"', label: "terms of use footer link" },
     { needle: 'id="registeredThanks"', label: "success state markup" },
   ];
 
