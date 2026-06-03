@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>caseFit • Coming Soon</title>
+  <title>caseFit • Legal Support, Intelligently Matched</title>
   <meta name="description" content="caseFit — a modern legal consultation app. Launching soon." />
-  <meta property="og:title" content="caseFit • Coming Soon" />
+  <meta property="og:title" content="caseFit • Legal Support, Intelligently Matched" />
   <meta property="og:description" content="Book vetted lawyers, share documents securely, and manage your matter in one app. Launching soon." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.thecasefit.com" />
@@ -63,7 +63,7 @@
     .brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink)}
     .logo{height:132px;display:block;filter:drop-shadow(0 18px 38px rgba(0,0,0,.52));animation:fadeUp .7s ease both}
     .hero{display:grid;grid-template-columns:1.04fr .96fr;gap:38px;align-items:center;padding:30px 0 22px;min-height:calc(100vh - 190px)}
-    @media (max-width:900px){.hero{grid-template-columns:1fr;text-align:center;min-height:auto}.left{order:2}.right{order:1}.lead{margin-left:auto;margin-right:auto}.timer,.ctaRow{justify-content:center}header{justify-content:center;flex-wrap:wrap}.legalbar{justify-items:center}}
+    @media (max-width:900px){.hero{grid-template-columns:1fr;text-align:center;min-height:auto}.left{order:2}.right{order:1}.lead{margin-left:auto;margin-right:auto}.timer,.ctaRow{justify-content:center}header{justify-content:center;flex-wrap:wrap}.legalbar{justify-items:center}.launch-panel{text-align:left}}
     .eyebrow{font-size:.8rem;color:var(--muted);letter-spacing:.18em;text-transform:uppercase}
     h1{font-size:4.55rem;line-height:.96;margin:.25em 0 .25em;letter-spacing:0;font-weight:850}
     h1 .shine{display:inline-block;background:linear-gradient(90deg,#fff 0%,#dfefff 38%,var(--gold) 62%,#fff 100%);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:textSheen 8s ease-in-out infinite}
@@ -80,6 +80,31 @@
     .btn{cursor:pointer;border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:12px 16px;font-weight:750;letter-spacing:.02em;background:#fff;color:#000;box-shadow:0 12px 32px rgba(255,255,255,.08);transition:transform .22s ease,box-shadow .22s ease,filter .22s ease}
     .btn-ghost{background:rgba(255,255,255,.04);color:#fff}.btn:hover{filter:brightness(.96);transform:translateY(-2px);box-shadow:0 18px 42px rgba(143,211,255,.16)}
     .card{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:8px;padding:20px;backdrop-filter:blur(12px);box-shadow:var(--shadow)}
+    .launch-ribbon{display:inline-grid;grid-template-columns:auto auto;align-items:center;gap:10px;justify-self:end;min-height:44px;padding:6px 8px 6px 6px;border:1px solid rgba(255,255,255,.14);border-radius:999px;color:#fff;background:linear-gradient(135deg,rgba(255,255,255,.14),rgba(255,255,255,.045));box-shadow:0 18px 46px rgba(0,0,0,.26),0 0 0 1px rgba(245,208,130,.08) inset,inset 0 1px 0 rgba(255,255,255,.18);backdrop-filter:blur(14px);position:relative;overflow:hidden}
+    .launch-ribbon::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(245,208,130,.18),transparent 36%,rgba(143,211,255,.16));opacity:.8;pointer-events:none}
+    .launch-ribbon::after{content:"";position:absolute;inset:1px;border-radius:999px;border:1px solid rgba(245,208,130,.18);pointer-events:none}
+    .launch-ribbon .signal{position:relative;width:32px;height:32px;border-radius:999px;background:radial-gradient(circle,#ffe29a 0 22%,rgba(245,208,130,.22) 24% 48%,rgba(255,255,255,.08) 50%);box-shadow:0 0 24px rgba(245,208,130,.28),inset 0 1px 0 rgba(255,255,255,.46);z-index:1}
+    .launch-ribbon .signal::before{content:"";position:absolute;inset:-5px;border-top:1px solid rgba(245,208,130,.68);border-right:1px solid transparent;border-bottom:1px solid rgba(143,211,255,.26);border-left:1px solid transparent;border-radius:999px;animation:constellationTurn 5.5s linear infinite}
+    .launch-ribbon .signal::after{content:"";position:absolute;right:2px;top:6px;width:4px;height:4px;border-radius:999px;background:#8fd3ff;box-shadow:0 0 14px rgba(143,211,255,.8)}
+    .launch-ribbon span:last-child{position:relative;z-index:1;display:grid;gap:1px;padding-right:3px;font-size:0;color:transparent}
+    .launch-ribbon span:last-child::before{content:"Live access";color:#fff;font-size:.93rem;font-weight:850;line-height:1.05;letter-spacing:0}
+    .launch-ribbon span:last-child::after{content:"Now onboarding";color:#b8c2cf;font-size:.67rem;font-weight:800;line-height:1.1;letter-spacing:.12em;text-transform:uppercase}
+    .launch-panel{display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:center;margin:24px 0 18px;padding:20px;border:1px solid rgba(245,208,130,.25);border-radius:8px;background:linear-gradient(145deg,rgba(255,255,255,.1),rgba(255,255,255,.035) 36%,rgba(245,208,130,.09));box-shadow:0 30px 86px rgba(0,0,0,.38),0 0 0 1px rgba(255,255,255,.04) inset,inset 0 1px 0 rgba(255,255,255,.16);position:relative;overflow:hidden;isolation:isolate}
+    .launch-panel::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 14% 28%,rgba(245,208,130,.2) 0 2px,transparent 3px),radial-gradient(circle at 27% 72%,rgba(143,211,255,.22) 0 1px,transparent 3px),radial-gradient(circle at 74% 24%,rgba(255,255,255,.18) 0 1px,transparent 3px),linear-gradient(115deg,transparent 12%,rgba(255,255,255,.12),transparent 44%);background-size:auto,auto,auto,100% 100%;transform:translateX(-120%);animation:launchSweep 6.4s ease-in-out infinite;z-index:-1}
+    .launch-panel::after{content:"";position:absolute;inset:1px;border-radius:7px;border:1px solid rgba(255,255,255,.055);pointer-events:none}
+    .launch-orbit{position:relative;width:102px;height:102px;border-radius:999px;display:grid;place-items:center;background:radial-gradient(circle at 50% 50%,rgba(245,208,130,.12),transparent 56%);filter:drop-shadow(0 20px 36px rgba(0,0,0,.34))}
+    .launch-orbit::before,.launch-orbit::after{content:"";position:absolute;border-radius:999px;pointer-events:none}
+    .launch-orbit::before{inset:0;border:1px solid rgba(245,208,130,.28);background:conic-gradient(from 30deg,transparent 0 18%,rgba(245,208,130,.82) 19% 20%,transparent 21% 46%,rgba(143,211,255,.68) 47% 48%,transparent 49% 74%,rgba(255,255,255,.68) 75% 76%,transparent 77%);animation:constellationTurn 12s linear infinite}
+    .launch-orbit::after{inset:13px;border:1px solid rgba(255,255,255,.16);box-shadow:0 0 34px rgba(245,208,130,.12) inset;animation:sealGlow 3.8s ease-in-out infinite}
+    .launch-core{position:relative;width:62px;height:62px;border-radius:999px;display:grid;place-items:center;color:#070809;background:linear-gradient(135deg,#fff 0%,#f9e8b0 52%,#c79a3b 100%);font-size:.75rem;letter-spacing:.08em;font-weight:950;box-shadow:0 16px 34px rgba(245,208,130,.2),inset 0 1px 0 rgba(255,255,255,.8);animation:corePulse 3.2s ease-in-out infinite}
+    .launch-core::before{content:"";position:absolute;width:70px;height:1px;background:linear-gradient(90deg,transparent,rgba(245,208,130,.86),transparent);transform:rotate(90deg)}
+    .launch-core::after{content:"";position:absolute;width:76px;height:22px;border-top:1px solid rgba(7,8,9,.34);border-left:1px solid rgba(7,8,9,.24);border-right:1px solid rgba(7,8,9,.24);border-radius:999px 999px 0 0;transform:translateY(-7px)}
+    .launch-core span{position:relative;z-index:1}
+    .launch-copy{position:relative}
+    .launch-copy strong{display:block;color:#fff;font-size:1.32rem;line-height:1.2}
+    .launch-copy span{display:block;margin-top:8px;color:#d7dce4;line-height:1.65}
+    .launch-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .launch-chip{font-size:.7rem;letter-spacing:.11em;text-transform:uppercase;color:#fff4cc;background:rgba(245,208,130,.1);border:1px solid rgba(245,208,130,.28);border-radius:999px;padding:7px 9px;font-weight:900;box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
     .progress{height:8px;border-radius:999px;background:#0e0e0e;border:1px solid var(--line);overflow:hidden}
     .bar{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),var(--gold));box-shadow:0 0 6px rgba(143,211,255,.8) inset,0 0 18px rgba(143,211,255,.5);transition:width .8s cubic-bezier(.2,.8,.2,1);position:relative}
     .bar::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.58),transparent);animation:shimmer 2.6s linear infinite}
@@ -88,6 +113,19 @@
     .feat{display:flex;gap:12px;align-items:flex-start;padding:16px;border-radius:8px;background:rgba(255,255,255,.045);border:1px solid var(--line);transition:transform .22s ease,border-color .22s ease,background .22s ease;animation:fadeUp .7s ease both}
     .feat:hover{transform:translateY(-4px);border-color:rgba(143,211,255,.38);background:rgba(143,211,255,.07)}
     .feat .icon{width:34px;height:34px;border-radius:8px;display:grid;place-items:center;background:linear-gradient(135deg,#fff,var(--accent));color:#000;font-weight:800;box-shadow:0 12px 28px rgba(143,211,255,.18)}
+    .audience-panel{margin-top:26px;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr);gap:18px;align-items:stretch;position:relative}
+    .audience-panel::before{content:"";position:absolute;inset:-1px;border-radius:10px;background:linear-gradient(120deg,rgba(143,211,255,.18),transparent 34%,rgba(245,208,130,.12));opacity:.58;filter:blur(18px);z-index:-1;transform:translateY(10px);transition:opacity .24s ease,transform .24s ease}
+    .audience-panel:hover::before{opacity:.9;transform:translateY(2px)}
+    .audience-copy{display:grid;align-content:center;gap:14px}
+    .audience-copy h2{margin:0;font-size:clamp(1.9rem,4vw,3rem);line-height:1.03;letter-spacing:0}
+    .audience-copy p{margin:0;color:#dbe5ee;font-size:1.04rem;line-height:1.7;max-width:56ch}
+    .audience-points{display:grid;gap:10px}
+    .audience-point{display:flex;gap:10px;align-items:flex-start;padding:12px;border:1px solid rgba(255,255,255,.1);border-radius:8px;background:rgba(255,255,255,.035);transition:transform .22s ease,border-color .22s ease,background .22s ease}
+    .audience-point:hover{transform:translateX(4px);border-color:rgba(143,211,255,.32);background:rgba(143,211,255,.055)}
+    .audience-point svg{width:19px;height:19px;flex:0 0 auto;margin-top:2px;color:var(--green)}
+    .audience-point span{color:#e7edf4;line-height:1.45}
+    .audience-cta{display:inline-flex;width:max-content;align-items:center;gap:10px;margin-top:4px;color:#050609;background:linear-gradient(135deg,#fff,var(--accent));border-radius:8px;padding:12px 15px;font-weight:800;text-decoration:none;box-shadow:0 18px 42px rgba(143,211,255,.12);transition:transform .22s ease,box-shadow .22s ease}
+    .audience-cta:hover{transform:translateY(-2px);box-shadow:0 24px 54px rgba(143,211,255,.18)}
     .notify{display:flex;gap:10px;flex-wrap:wrap}
 
     /* FIX: apply flex/min-width to non-checkbox inputs only */
@@ -145,19 +183,36 @@
     .site-footer{
       width:100vw;
       margin:54px calc(50% - 50vw) 0;
-      padding:56px 24px 34px;
-      background:#202020;
-      border-top:1px solid rgba(255,255,255,.08);
-      box-shadow:0 -24px 70px rgba(0,0,0,.24)
+      padding:60px 24px 34px;
+      background:
+        linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px),
+        linear-gradient(180deg,rgba(255,255,255,.035) 1px,transparent 1px),
+        radial-gradient(circle at 76% 18%,rgba(143,211,255,.13),transparent 31%),
+        linear-gradient(180deg,#242424 0%,#1b1b1b 100%);
+      background-size:72px 72px,72px 72px,auto,auto;
+      border-top:1px solid rgba(255,255,255,.1);
+      box-shadow:0 -24px 70px rgba(0,0,0,.24);
+      position:relative;
+      overflow:hidden
     }
+    .site-footer::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),var(--gold),transparent);opacity:.72}
     .footer-inner{max-width:1240px;margin:0 auto}
+    .footer-cta{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;margin-bottom:40px;padding:22px;border:1px solid rgba(255,255,255,.12);border-radius:8px;background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.025));box-shadow:0 20px 70px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.08)}
+    .footer-cta strong{display:block;color:#fff;font-size:1.35rem;line-height:1.2}
+    .footer-cta span{display:block;margin-top:8px;color:#aaa;line-height:1.6}
+    .footer-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .footer-mini-btn{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:10px 13px;border-radius:8px;text-decoration:none;font-weight:800;color:#080a0f;background:#fff;transition:transform .2s ease,box-shadow .2s ease}
+    .footer-mini-btn.secondary{color:#fff;background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.14)}
+    .footer-mini-btn:hover{transform:translateY(-2px);box-shadow:0 18px 42px rgba(143,211,255,.14)}
     .footer-top{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr auto;gap:34px;align-items:start}
     .footer-brand{display:grid;gap:12px;justify-items:start;color:#fff;text-align:left}
     .footer-logo{font-size:1.9rem;line-height:1;font-weight:750;letter-spacing:.04em}
     .footer-tagline{max-width:28ch;margin:0;color:#8f8f8f;line-height:1.6}
     .footer-col{display:grid;gap:13px;justify-items:start;text-align:left}
     .footer-col strong{color:#8e8e8e;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
-    .footer-col span{color:#858585}
+    .footer-col span,.footer-col a{color:#858585;text-decoration:none}
+    .footer-col a{transition:color .2s ease,transform .2s ease}
+    .footer-col a:hover{color:#fff;transform:translateX(3px)}
     .footer-legal a{color:#858585;text-decoration:none;transition:color .2s ease}
     .footer-legal a:hover{color:#fff}
     .footer-social{display:flex;gap:9px;justify-content:flex-end}
@@ -232,10 +287,17 @@
     .left > *{animation:fadeUp .7s ease both}
     .left > *:nth-child(2){animation-delay:.1s}.left > *:nth-child(3){animation-delay:.18s}.left > *:nth-child(4){animation-delay:.26s}.left > *:nth-child(5){animation-delay:.34s}.left > *:nth-child(6){animation-delay:.42s}
     .product-visual{position:relative;min-height:470px;display:grid;place-items:center;perspective:1100px}
-    .app-shell{width:min(100%,440px);border:1px solid rgba(255,255,255,.14);border-radius:10px;background:linear-gradient(145deg,rgba(18,24,34,.94),rgba(5,7,10,.96));box-shadow:0 32px 90px rgba(0,0,0,.55),0 0 0 1px rgba(143,211,255,.06) inset;overflow:hidden;transform:rotateX(7deg) rotateY(-9deg);animation:floatPanel 6s ease-in-out infinite}
-    .app-top{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.04)}
+    .app-shell{width:min(100%,440px);border:1px solid rgba(255,255,255,.16);border-radius:10px;background:linear-gradient(145deg,rgba(18,24,34,.94),rgba(5,7,10,.96));box-shadow:0 32px 90px rgba(0,0,0,.55),0 0 0 1px rgba(143,211,255,.06) inset;overflow:hidden;transform:rotateX(7deg) rotateY(-9deg);animation:floatPanel 6s ease-in-out infinite}
+    .app-top{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.04)}
     .traffic{display:flex;gap:7px}.traffic span{width:8px;height:8px;border-radius:50%;background:#fff}.traffic span:nth-child(1){background:#ff7a90}.traffic span:nth-child(2){background:var(--gold)}.traffic span:nth-child(3){background:var(--green)}
     .status-chip{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:#061018;background:var(--accent);border-radius:999px;padding:6px 8px;font-weight:800}
+    .video-stage{position:relative;padding:12px;background:radial-gradient(circle at 50% 0,rgba(143,211,255,.12),transparent 38%),#05070a}
+    .video-stage::before{content:"";position:absolute;inset:12px;border-radius:8px;background:linear-gradient(135deg,rgba(255,255,255,.18),transparent 32%,rgba(245,208,130,.12));pointer-events:none;z-index:2;mix-blend-mode:screen}
+    .app-video{display:block;width:100%;aspect-ratio:9/16;max-height:560px;object-fit:cover;border:1px solid rgba(255,255,255,.12);border-radius:8px;background:#020305;box-shadow:0 18px 54px rgba(0,0,0,.38)}
+    .video-caption{position:absolute;left:24px;right:24px;bottom:24px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 10px;border:1px solid rgba(255,255,255,.14);border-radius:8px;background:rgba(5,7,10,.68);backdrop-filter:blur(14px);box-shadow:0 16px 42px rgba(0,0,0,.34);z-index:3}
+    .video-caption strong{font-size:.82rem;color:#fff;line-height:1.1}.video-caption span{font-size:.68rem;color:#b8c2cf;text-transform:uppercase;letter-spacing:.12em;font-weight:800}
+    .video-live{display:inline-flex;align-items:center;gap:6px;color:#fff4cc;font-size:.7rem;font-weight:900;text-transform:uppercase;letter-spacing:.1em}
+    .video-live::before{content:"";width:7px;height:7px;border-radius:999px;background:var(--gold);box-shadow:0 0 15px rgba(245,208,130,.82)}
     .screen-body{display:grid;gap:14px;padding:16px}
     .metric-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     .metric{padding:14px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.045)}
@@ -251,13 +313,19 @@
     .motion-rail span{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.13em;text-transform:uppercase}.motion-rail strong{display:block;margin-top:5px;color:#fff}
     @media (max-width:900px){.product-visual{min-height:390px}.app-shell{transform:none}.secure-card{right:8%;bottom:12px}.motion-rail{left:8%;top:22px}}
     @media (max-width:900px){h1{font-size:3.35rem}.lead{font-size:1.08rem}}
-    @media (max-width:900px){.footer-top{grid-template-columns:1fr 1fr}.footer-social{justify-content:flex-start}.footer-bottom{align-items:flex-start}.footer-contact{width:100%}}
-    @media (max-width:540px){.wrap{padding:18px}.logo{height:108px}h1{font-size:2.45rem}.lead{font-size:1rem}.timer{display:grid;grid-template-columns:1fr 1fr}.unit{min-width:0}.product-visual{min-height:430px}.secure-card,.motion-rail{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:min(100%,300px);margin-top:10px}.app-shell{width:100%}.metric-row{grid-template-columns:1fr}.site-footer{padding:42px 18px 28px}.footer-top{grid-template-columns:1fr;gap:26px}.footer-rule{margin:34px 0 24px}.footer-legal{gap:12px;line-height:1.6}.contact-pill{width:100%;justify-content:center}.contact-pill.icon-only{width:54px}.footer-contact{display:grid;grid-template-columns:1fr 54px}}
+    @media (max-width:900px){.audience-panel{grid-template-columns:1fr}.audience-cta{width:100%;justify-content:center}}
+    @media (max-width:900px){.footer-cta{grid-template-columns:1fr}.footer-actions{justify-content:flex-start}.footer-top{grid-template-columns:1fr 1fr}.footer-social{justify-content:flex-start}.footer-bottom{align-items:flex-start}.footer-contact{width:100%}}
+    @media (max-width:540px){.wrap{padding:18px}.logo{height:108px}h1{font-size:2.45rem}.lead{font-size:1rem}.timer{display:grid;grid-template-columns:1fr 1fr}.unit{min-width:0}.launch-panel{grid-template-columns:1fr}.launch-orbit{margin:0 auto}.product-visual{min-height:430px}.secure-card,.motion-rail{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:min(100%,300px);margin-top:10px}.app-shell{width:100%}.metric-row{grid-template-columns:1fr}.site-footer{padding:42px 18px 28px}.footer-top{grid-template-columns:1fr;gap:26px}.footer-rule{margin:34px 0 24px}.footer-legal{gap:12px;line-height:1.6}.contact-pill{width:100%;justify-content:center}.contact-pill.icon-only{width:54px}.footer-contact{display:grid;grid-template-columns:1fr 54px}}
     @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
     @keyframes scan{to{transform:translateY(170%)}}
     @keyframes textSheen{0%,45%,100%{background-position:0% 50%}65%{background-position:100% 50%}}
     @keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.35);opacity:.68}}
     @keyframes shimmer{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+    @keyframes signalRing{0%{transform:scale(.45);opacity:.95}100%{transform:scale(1.8);opacity:0}}
+    @keyframes launchSweep{0%,55%,100%{transform:translateX(-120%)}75%{transform:translateX(120%)}}
+    @keyframes constellationTurn{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+    @keyframes sealGlow{0%,100%{opacity:.5;transform:scale(.98)}50%{opacity:1;transform:scale(1.03)}}
+    @keyframes corePulse{0%,100%{transform:scale(1);box-shadow:0 16px 34px rgba(245,208,130,.2),inset 0 1px 0 rgba(255,255,255,.8)}50%{transform:scale(1.045);box-shadow:0 20px 48px rgba(245,208,130,.28),inset 0 1px 0 rgba(255,255,255,.9)}}
     @keyframes slowDrift{from{transform:translate3d(-16px,-10px,0) scale(1)}to{transform:translate3d(18px,12px,0) scale(1.03)}}
     @keyframes floatPanel{0%,100%{transform:rotateX(7deg) rotateY(-9deg) translateY(0)}50%{transform:rotateX(7deg) rotateY(-9deg) translateY(-12px)}}
     @keyframes floatSmall{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
@@ -277,23 +345,31 @@
         <img class="logo" src="casefit-wordmark-white.png" alt="caseFit" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'caseFit',style:'font-weight:800;font-size:1.15rem'}) )"/>
       </a>
       <div class="legalbar">
-        <div class="eyebrow" id="launchCopy" style="justify-self:end">
-          Launching in <span class="num" id="daysLeftNum">45</span> days
+        <div class="launch-ribbon" id="launchCopy">
+          <span class="signal" aria-hidden="true"></span>
+          <span>Launched · Early access live</span>
         </div>
       </div>
     </header>
 
     <section class="hero">
       <div class="left">
-        <span class="pill"><span class="dot"></span> Private beta opens soon</span>
+        <span class="pill"><span class="dot"></span> Early access is live</span>
         <h1><span class="shine">Legal support, intelligently matched.</span></h1>
         <p class="lead">caseFit gets you the right lawyer fast. Connect, consult, and track your case in one simple app</p>
 
-        <div class="timer" role="timer" aria-live="polite">
-          <div class="unit" aria-label="Days"><div class="num" id="d">--</div><div class="lbl">Days</div></div>
-          <div class="unit" aria-label="Hours"><div class="num" id="h">--</div><div class="lbl">Hours</div></div>
-          <div class="unit" aria-label="Minutes"><div class="num" id="m">--</div><div class="lbl">Minutes</div></div>
-          <div class="unit" aria-label="Seconds"><div class="num" id="s">--</div><div class="lbl">Seconds</div></div>
+        <div class="launch-panel" aria-label="caseFit launch status">
+          <div class="launch-orbit" aria-hidden="true">
+            <div class="launch-core"><span>LIVE</span></div>
+          </div>
+          <div class="launch-copy">
+            <strong>Launched for early access.</strong>
+            <span>The network is opening in controlled waves for clients, lawyers, and partners while the platform is refined with real consultation workflows.</span>
+            <div class="launch-meta" aria-label="Launch status details">
+              <span class="launch-chip">Verified intake</span>
+              <span class="launch-chip">Lawyer network</span>
+            </div>
+          </div>
         </div>
 
         <div class="ctaRow">
@@ -305,8 +381,8 @@
           <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
             <div style="flex:1">
               <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-                <strong>Build progress</strong>
-                <span class="eyebrow" id="progressLabel">~0%</span>
+                <strong>Platform status</strong>
+                <span class="eyebrow" id="progressLabel">Live</span>
               </div>
               <div class="progress"><div class="bar" id="bar"></div></div>
             </div>
@@ -320,30 +396,21 @@
             <span>Intake routed</span>
             <strong>Priority review queue</strong>
           </div>
-          <div class="app-shell" aria-hidden="true">
+          <div class="app-shell">
             <div class="app-top">
               <div class="traffic"><span></span><span></span><span></span></div>
               <div class="status-chip">Secure</div>
             </div>
-            <div class="screen-body">
-              <div class="metric-row">
-                <div class="metric"><strong>Vetted</strong><span>Legal network</span></div>
-                <div class="metric"><strong>Secure</strong><span>Document flow</span></div>
-              </div>
-              <div class="case-row">
-                <div class="avatar"></div>
-                <div class="lines"><div class="line mid"></div><div class="line short"></div></div>
-                <div class="tag">New</div>
-              </div>
-              <div class="case-row">
-                <div class="avatar"></div>
-                <div class="lines"><div class="line"></div><div class="line short"></div></div>
-                <div class="tag">Match</div>
-              </div>
-              <div class="case-row">
-                <div class="avatar"></div>
-                <div class="lines"><div class="line mid"></div><div class="line"></div></div>
-                <div class="tag">Review</div>
+            <div class="video-stage">
+              <video class="app-video" autoplay muted loop playsinline controls preload="metadata" aria-label="caseFit app screen recording preview">
+                <source src="/casefit-app-preview.mp4" type="video/mp4" />
+                Your browser does not support the caseFit app preview video.
+              </video>
+              <div class="video-caption" aria-hidden="true">
+                <div>
+                  <strong>caseFit app preview</strong>
+                </div>
+                <div class="video-live">Live</div>
               </div>
             </div>
           </div>
@@ -380,6 +447,60 @@
             <div class="hr"></div>
             <p class="lead" style="font-size:.98rem">Smart. Secure. Seamless. Legal help redefined for the digital age</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="for-clients" class="audience-panel">
+      <div class="card audience-copy">
+        <div class="eyebrow">For clients</div>
+        <h2>Find the right legal support faster</h2>
+        <p>caseFit helps you share your issue clearly, connect with verified lawyers, and track consultation requests without messy back-and-forth.</p>
+        <a class="audience-cta" href="#register" onclick="setRole('Client')">Get Early Access <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="card audience-points" aria-label="caseFit client benefits">
+        <div class="audience-point">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg>
+          <span>Submit your legal need through a simple, guided intake flow.</span>
+        </div>
+        <div class="audience-point">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg>
+          <span>Get matched with verified legal professionals across relevant practice areas.</span>
+        </div>
+        <div class="audience-point">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg>
+          <span>Keep documents, appointment details, and case updates organized in one place.</span>
+        </div>
+        <div class="audience-point">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg>
+          <span>Use a secure platform designed for private legal consultation workflows.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="for-lawyers" class="audience-panel">
+      <div class="card audience-copy">
+        <div class="eyebrow">For legal professionals</div>
+        <h2>Grow your legal practice with caseFit</h2>
+        <p>Join a modern legal network built for verified consultation requests, organized client intake, and secure matter handoff across India.</p>
+        <a class="audience-cta" href="#register" onclick="setRole('Lawyer')">Join the Lawyer Network <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="card audience-points" aria-label="caseFit lawyer benefits">
+        <div class="audience-point">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg>
+          <span>Receive verified consultation requests from clients looking for legal support.</span>
+        </div>
+        <div class="audience-point">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg>
+          <span>Connect with clients across India while keeping your practice workflow simple.</span>
+        </div>
+        <div class="audience-point">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg>
+          <span>Manage requests, appointment details, and case status from one dashboard.</span>
+        </div>
+        <div class="audience-point">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg>
+          <span>Build your professional presence on a secure and transparent platform.</span>
         </div>
       </div>
     </section>
@@ -445,6 +566,17 @@
 
     <footer class="site-footer">
       <div class="footer-inner">
+        <div class="footer-cta">
+          <div>
+            <strong>One legal platform for clients and lawyers.</strong>
+            <span>Join early access and help shape a more secure, organized way to request and deliver legal consultations.</span>
+          </div>
+          <div class="footer-actions">
+            <a class="footer-mini-btn" href="#register" onclick="setInterest('Other','I would like early access to caseFit.')">Register interest</a>
+            <a class="footer-mini-btn secondary" href="#register" onclick="setInterest('Other','I am interested in partnering with caseFit.')">Partner with us</a>
+          </div>
+        </div>
+
         <div class="footer-top">
           <div class="footer-brand">
             <div class="footer-logo">caseFit Technologies</div>
@@ -453,25 +585,25 @@
 
           <div class="footer-col" aria-label="Discover">
             <strong>Discover</strong>
-            <span>Features</span>
-            <span>Early access</span>
-            <span>For clients</span>
-            <span>For lawyers</span>
+            <a href="#features">Features</a>
+            <a href="#register">Early access</a>
+            <a href="#for-clients">For clients</a>
+            <a href="#for-lawyers">For lawyers</a>
           </div>
 
           <div class="footer-col" aria-label="Connect">
             <strong>Connect</strong>
-            <span>Customer Service</span>
-            <span>Contact Us</span>
-            <span>Partnerships</span>
-            <span>Provide Feedback</span>
+            <a href="#register" onclick="setInterest('Other','I need help from caseFit customer service.')">Customer Service</a>
+            <a href="#register" onclick="setInterest('Other','I would like the caseFit team to contact me.')">Contact Us</a>
+            <a href="#register" onclick="setInterest('Other','I am interested in partnering with caseFit.')">Partnerships</a>
+            <a href="#register" onclick="setInterest('Other','I would like to share feedback about caseFit.')">Provide Feedback</a>
           </div>
 
           <div class="footer-col" aria-label="Company">
             <strong>Company</strong>
-            <span>About caseFit</span>
-            <span>Legal network</span>
-            <span>Security</span>
+            <a href="#features">About caseFit</a>
+            <a href="#for-lawyers">Legal network</a>
+            <a href="/privacy-policy#security">Security</a>
           </div>
 
           <div class="footer-social" aria-label="Social links">
@@ -495,7 +627,7 @@
             <span>© <span id="yr"></span> caseFit Technologies. All rights reserved.</span>
             <a href="/privacy-policy">Privacy Policy</a>
             <a href="/terms-of-use">Terms of Use</a>
-            <span>Site Map</span>
+            <a href="/sitemap">Site Map</a>
           </div>
 
           <div class="footer-contact">
@@ -508,7 +640,7 @@
               <span class="contact-label">WhatsApp</span>
               <span>+91 980-786-3007</span>
             </a>
-            <a class="contact-pill icon-only" href="mailto:support@thecasefit.com" aria-label="Email support@thecasefit.com">
+            <a class="contact-pill icon-only" href="mailto:admin@thecasefit.com" aria-label="Email admin@thecasefit.com">
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M4 6h16v12H4z"/>
                 <path d="m4 7 8 6 8-6"/>
@@ -521,52 +653,22 @@
   </div>
 
   <script>
-  // Countdown is anchored to a single launch date so it never resets on reload.
-  const START_AT_TEN = true;
-  const PROGRESS_PERCENT = 12;
-  const START_DATE = new Date('2026-04-29T00:00:00-04:00').getTime();
-  const LAUNCH_DATE = new Date('2026-05-29T00:00:00-04:00').getTime();
-
-  const d=document.getElementById('d'),h=document.getElementById('h'),m=document.getElementById('m'),s=document.getElementById('s');
   const bar=document.getElementById('bar'),label=document.getElementById('progressLabel');
-  const header=document.getElementById('launchCopy'),daysBadge=document.getElementById('daysLeftNum');
-  const clamp=(v,min,max)=>Math.max(min,Math.min(max,v));const pad=n=>String(n).padStart(2,'0');
+  function setRole(role){
+    const roleSelect=document.querySelector('select[name="role"]');
+    if(roleSelect) roleSelect.value=role;
+  }
+  function setInterest(role,message){
+    setRole(role);
+    const messageBox=document.querySelector('textarea[name="message"]');
+    const form=document.getElementById('register');
+    if(messageBox && message) messageBox.value=message;
+    if(form) form.scrollIntoView({behavior:'smooth',block:'start'});
+    setTimeout(()=>messageBox && messageBox.focus(),450);
+  }
 
-  const target=LAUNCH_DATE;
-  const total=Math.max(1,LAUNCH_DATE-START_DATE);
-  const progressed=Math.min(total,Math.max(0,Date.now()-START_DATE));
-  let progressToShow=progressed/total*100;
-  if(PROGRESS_PERCENT > 0) {
-    progressToShow = Math.max(progressToShow, PROGRESS_PERCENT);
-  }
-  if(START_AT_TEN && progressToShow < 10) {
-    progressToShow = 10;
-  }
-  progressToShow=clamp(progressToShow,0,100);
-
-  function updateProgressBar(pct){
-    if(bar) bar.style.width=pct.toFixed(2)+'%';
-    if(label) label.textContent=`~${Math.round(pct)}%`;
-  }
-  updateProgressBar(progressToShow);
-
-  function tick(){
-    const now=Date.now();const diff=Math.max(0,target-now);
-    const dayMs=86400000;
-    const days=Math.floor(diff/dayMs);
-    const hours=Math.floor((diff%dayMs)/3600000);
-    const mins=Math.floor((diff%3600000)/60000);
-    const secs=Math.floor((diff%60000)/1000);
-    if(d) d.textContent=pad(days);
-    if(h) h.textContent=pad(hours);
-    if(m) m.textContent=pad(mins);
-    if(s) s.textContent=pad(secs);
-    if(header && daysBadge){
-      if(diff>0){ daysBadge.textContent=String(Math.ceil(diff/dayMs)); }
-      else{ header.textContent='Launched 🎉'; }
-    }
-  }
-  tick(); setInterval(tick,1000);
+  if(bar) requestAnimationFrame(()=>{ bar.style.width='100%'; });
+  if(label) label.textContent='Live';
   document.getElementById('yr').textContent=new Date().getFullYear();
 
   // Handle form submission and explicit CAPTCHA validation
