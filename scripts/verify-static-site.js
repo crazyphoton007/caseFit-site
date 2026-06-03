@@ -6,6 +6,9 @@ const requiredFiles = [
   "index.html",
   "privacy-policy.html",
   "terms-of-use.html",
+  "sitemap.html",
+  "sitemap.xml",
+  "robots.txt",
   "_redirects",
   "casefit-wordmark-white.png",
   "favicon.svg",
@@ -17,6 +20,7 @@ const requiredFiles = [
   "android-chrome-192x192.png",
   "android-chrome-512x512.png",
   "site.webmanifest",
+  "casefit-app-preview.mp4",
 ];
 const htmlPath = path.join(publishDir, "index.html");
 
@@ -41,7 +45,11 @@ if (fs.existsSync(htmlPath)) {
     { needle: 'href="/site.webmanifest?v=4"', label: "web manifest reference" },
     { needle: 'href="/privacy-policy"', label: "privacy policy footer link" },
     { needle: 'href="/terms-of-use"', label: "terms of use footer link" },
+    { needle: 'href="/sitemap"', label: "site map footer link" },
+    { needle: 'id="for-clients"', label: "clients section" },
+    { needle: 'id="for-lawyers"', label: "lawyers section" },
     { needle: 'id="registeredThanks"', label: "success state markup" },
+    { needle: 'src="/casefit-app-preview.mp4"', label: "app preview video" },
   ];
 
   for (const check of checks) {

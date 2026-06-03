@@ -20,6 +20,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "dev": "npm start",
     "start": "node scripts/serve-static.js",
     "build": "node scripts/verify-static-site.js",
     "test": "node scripts/verify-static-site.js"
