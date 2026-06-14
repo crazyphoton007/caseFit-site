@@ -11,6 +11,7 @@
   <meta property="og:url" content="https://www.thecasefit.com" />
   <meta name="theme-color" content="#000000" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <link rel="preload" as="image" href="/playstore-qr.jpeg" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
   <link rel="icon" href="/browser_tab_logo.png?v=5" type="image/png" sizes="32x32" />
   <link rel="icon" href="/favicon.ico?v=4" sizes="any" />
@@ -62,7 +63,7 @@
     header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:6px 0 16px;border-bottom:1px solid var(--line)}
     .brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink)}
     .logo{height:132px;display:block;filter:drop-shadow(0 18px 38px rgba(0,0,0,.52));animation:fadeUp .7s ease both}
-    .hero{display:grid;grid-template-columns:1.04fr .96fr;gap:38px;align-items:center;padding:30px 0 22px;min-height:calc(100vh - 190px)}
+    .hero{display:grid;grid-template-columns:1.04fr .96fr;gap:38px;align-items:center;padding:30px 0 22px;min-height:calc(100vh - 190px);position:relative}
     @media (max-width:900px){.hero{grid-template-columns:1fr;text-align:center;min-height:auto}.left{order:2}.right{order:1}.lead{margin-left:auto;margin-right:auto}.timer,.ctaRow{justify-content:center}header{justify-content:center;flex-wrap:wrap}.legalbar{justify-items:center}.launch-panel{text-align:left}}
     .eyebrow{font-size:.8rem;color:var(--muted);letter-spacing:.18em;text-transform:uppercase}
     h1{font-size:4.55rem;line-height:.96;margin:.25em 0 .25em;letter-spacing:0;font-weight:850}
@@ -80,15 +81,17 @@
     .btn{cursor:pointer;border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:12px 16px;font-weight:750;letter-spacing:.02em;background:#fff;color:#000;box-shadow:0 12px 32px rgba(255,255,255,.08);transition:transform .22s ease,box-shadow .22s ease,filter .22s ease}
     .btn-ghost{background:rgba(255,255,255,.04);color:#fff}.btn:hover{filter:brightness(.96);transform:translateY(-2px);box-shadow:0 18px 42px rgba(143,211,255,.16)}
     .card{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:8px;padding:20px;backdrop-filter:blur(12px);box-shadow:var(--shadow)}
-    .launch-ribbon{display:inline-grid;grid-template-columns:auto auto;align-items:center;gap:10px;justify-self:end;min-height:44px;padding:6px 8px 6px 6px;border:1px solid rgba(255,255,255,.14);border-radius:999px;color:#fff;background:linear-gradient(135deg,rgba(255,255,255,.14),rgba(255,255,255,.045));box-shadow:0 18px 46px rgba(0,0,0,.26),0 0 0 1px rgba(245,208,130,.08) inset,inset 0 1px 0 rgba(255,255,255,.18);backdrop-filter:blur(14px);position:relative;overflow:hidden}
-    .launch-ribbon::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(245,208,130,.18),transparent 36%,rgba(143,211,255,.16));opacity:.8;pointer-events:none}
-    .launch-ribbon::after{content:"";position:absolute;inset:1px;border-radius:999px;border:1px solid rgba(245,208,130,.18);pointer-events:none}
-    .launch-ribbon .signal{position:relative;width:32px;height:32px;border-radius:999px;background:radial-gradient(circle,#ffe29a 0 22%,rgba(245,208,130,.22) 24% 48%,rgba(255,255,255,.08) 50%);box-shadow:0 0 24px rgba(245,208,130,.28),inset 0 1px 0 rgba(255,255,255,.46);z-index:1}
-    .launch-ribbon .signal::before{content:"";position:absolute;inset:-5px;border-top:1px solid rgba(245,208,130,.68);border-right:1px solid transparent;border-bottom:1px solid rgba(143,211,255,.26);border-left:1px solid transparent;border-radius:999px;animation:constellationTurn 5.5s linear infinite}
-    .launch-ribbon .signal::after{content:"";position:absolute;right:2px;top:6px;width:4px;height:4px;border-radius:999px;background:#8fd3ff;box-shadow:0 0 14px rgba(143,211,255,.8)}
-    .launch-ribbon span:last-child{position:relative;z-index:1;display:grid;gap:1px;padding-right:3px;font-size:0;color:transparent}
-    .launch-ribbon span:last-child::before{content:"Live access";color:#fff;font-size:.93rem;font-weight:850;line-height:1.05;letter-spacing:0}
-    .launch-ribbon span:last-child::after{content:"Now onboarding";color:#b8c2cf;font-size:.67rem;font-weight:800;line-height:1.1;letter-spacing:.12em;text-transform:uppercase}
+    .floating-qr-widget{width:198px;display:grid;gap:10px;justify-items:center;padding:14px 14px 15px;border-radius:24px;color:#fff;text-decoration:none;background:linear-gradient(145deg,rgba(255,255,255,.16),rgba(255,255,255,.055));border:1px solid rgba(255,255,255,.2);box-shadow:0 26px 70px rgba(0,0,0,.34),0 0 54px rgba(143,211,255,.12),inset 0 1px 0 rgba(255,255,255,.22);backdrop-filter:blur(18px);animation:floatingQr 6.8s ease-in-out infinite;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+    .floating-qr-widget::before{content:"";position:absolute;inset:12px;border-radius:20px;background:radial-gradient(circle at 50% 35%,rgba(255,255,255,.16),transparent 48%);opacity:.82;pointer-events:none}
+    .floating-qr-widget:hover{transform:translateY(-6px) scale(1.025);border-color:rgba(255,255,255,.34);box-shadow:0 34px 88px rgba(0,0,0,.4),0 0 76px rgba(134,239,172,.18),inset 0 1px 0 rgba(255,255,255,.28)}
+    .floating-qr-title,.floating-qr-sub,.floating-qr-note,.floating-qr-frame{position:relative;z-index:1}
+    .floating-qr-title{font-size:.82rem;font-weight:950;letter-spacing:.02em;color:#fff}
+    .floating-qr-frame{width:142px;aspect-ratio:1;padding:8px;border-radius:18px;background:#fff;box-shadow:0 18px 38px rgba(0,0,0,.28),0 0 42px rgba(255,255,255,.16);animation:qrPulse 4.4s ease-in-out infinite}
+    .floating-qr-frame > img{display:block;width:100%;height:100%;object-fit:contain;border-radius:10px}
+    .floating-qr-logo{display:none}
+    .floating-qr-sub{font-size:.82rem;font-weight:950;color:#fff;line-height:1.15;text-align:center}
+    .floating-qr-note{margin:0;color:#c7ced8;font-size:.72rem;line-height:1.35;text-align:center}
+    .floating-qr-mobile{display:none}
     .launch-panel{display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:center;margin:24px 0 18px;padding:20px;border:1px solid rgba(245,208,130,.25);border-radius:8px;background:linear-gradient(145deg,rgba(255,255,255,.1),rgba(255,255,255,.035) 36%,rgba(245,208,130,.09));box-shadow:0 30px 86px rgba(0,0,0,.38),0 0 0 1px rgba(255,255,255,.04) inset,inset 0 1px 0 rgba(255,255,255,.16);position:relative;overflow:hidden;isolation:isolate}
     .launch-panel::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 14% 28%,rgba(245,208,130,.2) 0 2px,transparent 3px),radial-gradient(circle at 27% 72%,rgba(143,211,255,.22) 0 1px,transparent 3px),radial-gradient(circle at 74% 24%,rgba(255,255,255,.18) 0 1px,transparent 3px),linear-gradient(115deg,transparent 12%,rgba(255,255,255,.12),transparent 44%);background-size:auto,auto,auto,100% 100%;transform:translateX(-120%);animation:launchSweep 6.4s ease-in-out infinite;z-index:-1}
     .launch-panel::after{content:"";position:absolute;inset:1px;border-radius:7px;border:1px solid rgba(255,255,255,.055);pointer-events:none}
@@ -313,9 +316,10 @@
     .motion-rail span{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.13em;text-transform:uppercase}.motion-rail strong{display:block;margin-top:5px;color:#fff}
     @media (max-width:900px){.product-visual{min-height:390px}.app-shell{transform:none}.secure-card{right:8%;bottom:12px}.motion-rail{left:8%;top:22px}}
     @media (max-width:900px){h1{font-size:3.35rem}.lead{font-size:1.08rem}}
+    @media (max-width:900px){.floating-qr-widget{width:176px;padding:13px 12px;border-radius:22px}.floating-qr-frame{width:126px;border-radius:16px}.floating-qr-title{font-size:.76rem}.floating-qr-sub{font-size:.76rem}.floating-qr-note{font-size:.66rem}}
     @media (max-width:900px){.audience-panel{grid-template-columns:1fr}.audience-cta{width:100%;justify-content:center}}
     @media (max-width:900px){.footer-cta{grid-template-columns:1fr}.footer-actions{justify-content:flex-start}.footer-top{grid-template-columns:1fr 1fr}.footer-social{justify-content:flex-start}.footer-bottom{align-items:flex-start}.footer-contact{width:100%}}
-    @media (max-width:540px){.wrap{padding:18px}.logo{height:108px}h1{font-size:2.45rem}.lead{font-size:1rem}.timer{display:grid;grid-template-columns:1fr 1fr}.unit{min-width:0}.launch-panel{grid-template-columns:1fr}.launch-orbit{margin:0 auto}.product-visual{min-height:430px}.secure-card,.motion-rail{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:min(100%,300px);margin-top:10px}.app-shell{width:100%}.metric-row{grid-template-columns:1fr}.site-footer{padding:42px 18px 28px}.footer-top{grid-template-columns:1fr;gap:26px}.footer-rule{margin:34px 0 24px}.footer-legal{gap:12px;line-height:1.6}.contact-pill{width:100%;justify-content:center}.contact-pill.icon-only{width:54px}.footer-contact{display:grid;grid-template-columns:1fr 54px}}
+    @media (max-width:540px){.wrap{padding:18px}.logo{height:108px}h1{font-size:2.45rem}.lead{font-size:1rem}.timer{display:grid;grid-template-columns:1fr 1fr}.unit{min-width:0}.launch-panel{grid-template-columns:1fr}.launch-orbit{margin:0 auto}.floating-qr-widget{display:none}.floating-qr-mobile{position:fixed;right:16px;bottom:16px;z-index:20;display:grid;justify-items:end}.floating-qr-toggle{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 15px;border:1px solid rgba(255,255,255,.18);border-radius:999px;color:#fff;background:rgba(8,9,11,.82);box-shadow:0 20px 52px rgba(0,0,0,.36),0 0 34px rgba(134,239,172,.12);backdrop-filter:blur(16px);font-weight:950}.floating-qr-toggle::before{content:"";width:8px;height:8px;border-radius:999px;background:#22c55e;box-shadow:0 0 18px rgba(34,197,94,.78)}.floating-qr-mobile-panel{display:none;width:236px;margin-bottom:10px;padding:15px;border-radius:22px;color:#fff;background:rgba(8,9,11,.88);border:1px solid rgba(255,255,255,.16);box-shadow:0 26px 70px rgba(0,0,0,.42),0 0 52px rgba(134,239,172,.14);backdrop-filter:blur(18px)}.floating-qr-mobile.open .floating-qr-mobile-panel{display:grid;gap:10px;justify-items:center;animation:fadeUp .22s ease both}.floating-qr-mobile .floating-qr-frame{width:156px}.floating-qr-mobile .floating-qr-title,.floating-qr-mobile .floating-qr-sub,.floating-qr-mobile .floating-qr-note{text-align:center}.product-visual{min-height:430px}.secure-card,.motion-rail{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:min(100%,300px);margin-top:10px}.app-shell{width:100%}.metric-row{grid-template-columns:1fr}.site-footer{padding:42px 18px 28px}.footer-top{grid-template-columns:1fr;gap:26px}.footer-rule{margin:34px 0 24px}.footer-legal{gap:12px;line-height:1.6}.contact-pill{width:100%;justify-content:center}.contact-pill.icon-only{width:54px}.footer-contact{display:grid;grid-template-columns:1fr 54px}}
     @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
     @keyframes scan{to{transform:translateY(170%)}}
     @keyframes textSheen{0%,45%,100%{background-position:0% 50%}65%{background-position:100% 50%}}
@@ -329,6 +333,8 @@
     @keyframes slowDrift{from{transform:translate3d(-16px,-10px,0) scale(1)}to{transform:translate3d(18px,12px,0) scale(1.03)}}
     @keyframes floatPanel{0%,100%{transform:rotateX(7deg) rotateY(-9deg) translateY(0)}50%{transform:rotateX(7deg) rotateY(-9deg) translateY(-12px)}}
     @keyframes floatSmall{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
+    @keyframes floatingQr{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    @keyframes qrPulse{0%,82%,100%{box-shadow:0 18px 38px rgba(0,0,0,.28),0 0 42px rgba(255,255,255,.16)}90%{box-shadow:0 20px 44px rgba(0,0,0,.3),0 0 0 8px rgba(134,239,172,.08),0 0 58px rgba(134,239,172,.24)}}
     @keyframes caseGlow{0%,100%{border-color:rgba(255,255,255,.1)}50%{border-color:rgba(143,211,255,.34)}}
     @media (prefers-reduced-motion:reduce){
       *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}
@@ -345,14 +351,25 @@
         <img class="logo" src="casefit-wordmark-white.png" alt="caseFit" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'caseFit',style:'font-weight:800;font-size:1.15rem'}) )"/>
       </a>
       <div class="legalbar">
-        <div class="launch-ribbon" id="launchCopy">
-          <span class="signal" aria-hidden="true"></span>
-          <span>Launched · Early access live</span>
-        </div>
+        <a class="floating-qr-widget" href="https://play.google.com/store/apps/details?id=com.casefit.india" target="_blank" rel="noopener" aria-label="Scan and download caseFit on Google Play">
+          <span class="floating-qr-title">📱 Scan & Download</span>
+          <span class="floating-qr-frame">
+            <img src="/playstore-qr.jpeg" alt="QR code to download caseFit from Google Play" width="118" height="118" decoding="async" />
+          </span>
+        </a>
       </div>
     </header>
 
     <section class="hero">
+      <div class="floating-qr-mobile" id="floatingQrMobile">
+        <div class="floating-qr-mobile-panel" id="floatingQrPanel" aria-hidden="true">
+          <span class="floating-qr-title">📱 Scan & Download</span>
+          <a class="floating-qr-frame" href="https://play.google.com/store/apps/details?id=com.casefit.india" target="_blank" rel="noopener" aria-label="Open caseFit on Google Play">
+            <img src="/playstore-qr.jpeg" alt="QR code to download caseFit from Google Play" width="132" height="132" decoding="async" />
+          </a>
+        </div>
+        <button class="floating-qr-toggle" type="button" aria-expanded="false" aria-controls="floatingQrPanel">Scan QR</button>
+      </div>
       <div class="left">
         <span class="pill"><span class="dot"></span> Early access is live</span>
         <h1><span class="shine">Legal support, intelligently matched.</span></h1>
@@ -363,9 +380,10 @@
             <div class="launch-core"><span>LIVE</span></div>
           </div>
           <div class="launch-copy">
-            <strong>Launched for early access.</strong>
-            <span>The network is opening in controlled waves for clients, lawyers, and partners while the platform is refined with real consultation workflows.</span>
+            <strong>caseFit is live on Google Play.</strong>
+            <span>Download the app, start your intake, and connect with verified legal support from your phone.</span>
             <div class="launch-meta" aria-label="Launch status details">
+              <span class="launch-chip">Play Store live</span>
               <span class="launch-chip">Verified intake</span>
               <span class="launch-chip">Lawyer network</span>
             </div>
@@ -373,7 +391,7 @@
         </div>
 
         <div class="ctaRow">
-          <button class="btn" type="button" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})">Register</button>
+          <button class="btn" type="button" onclick="window.open('https://play.google.com/store/apps/details?id=com.casefit.india','_blank','noopener')">Download app</button>
           <button class="btn btn-ghost" type="button" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">See features</button>
         </div>
 
@@ -569,10 +587,10 @@
         <div class="footer-cta">
           <div>
             <strong>One legal platform for clients and lawyers.</strong>
-            <span>Join early access and help shape a more secure, organized way to request and deliver legal consultations.</span>
+            <span>Download caseFit on Google Play and use a more secure, organized way to request and deliver legal consultations.</span>
           </div>
           <div class="footer-actions">
-            <a class="footer-mini-btn" href="#register" onclick="setInterest('Other','I would like early access to caseFit.')">Register interest</a>
+            <a class="footer-mini-btn" href="https://play.google.com/store/apps/details?id=com.casefit.india" target="_blank" rel="noopener">Download app</a>
             <a class="footer-mini-btn secondary" href="#register" onclick="setInterest('Other','I am interested in partnering with caseFit.')">Partner with us</a>
           </div>
         </div>
@@ -670,6 +688,17 @@
   if(bar) requestAnimationFrame(()=>{ bar.style.width='100%'; });
   if(label) label.textContent='Live';
   document.getElementById('yr').textContent=new Date().getFullYear();
+
+  const floatingQrMobile = document.getElementById('floatingQrMobile');
+  const floatingQrToggle = floatingQrMobile && floatingQrMobile.querySelector('.floating-qr-toggle');
+  const floatingQrPanel = document.getElementById('floatingQrPanel');
+  if (floatingQrToggle && floatingQrPanel) {
+    floatingQrToggle.addEventListener('click', () => {
+      const isOpen = floatingQrMobile.classList.toggle('open');
+      floatingQrToggle.setAttribute('aria-expanded', String(isOpen));
+      floatingQrPanel.setAttribute('aria-hidden', String(!isOpen));
+    });
+  }
 
   // Handle form submission and explicit CAPTCHA validation
   const registerForm = document.querySelector('form[name="register"]');
